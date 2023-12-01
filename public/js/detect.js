@@ -54,7 +54,7 @@ export const detect = (src, canvas, socket) => {
       }); // send image array to backend and await response (boxes)
       renderBoxes(boxes, ctx); // render boxes
       input.delete(); // clean memory
-
+      matPad.delete(); // clean memory
       requestAnimationFrame(processVideo); // request next frame
     } catch (err) {
       console.error(err);
